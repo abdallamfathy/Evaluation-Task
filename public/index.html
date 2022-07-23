@@ -1,0 +1,1016 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/public/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class=" font-body bg-slate-100 box-content  overflow-hidden ">
+    <div class="sm:grid  sm:grid-cols-4 ">
+        <div class="col-span-1 p-4 overflow-y-auto h-[61rem] scrollbar">
+
+            <!-- Navbar -->
+            <nav class="flex justify-between pt-4 ">
+                <div class="menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="flex ">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg></a>
+                    <a href="#" class="px-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg></a>
+                    <a href="#"><img src="img/profile.png" alt="profile" class="rounded-full w-6"></a>
+                </div>
+            </nav>
+
+
+            <!-- Watch Slider -->
+            <div class="relative" id="watch-slider">
+                <!-- Carousel wrapper -->
+                <div class=" overflow-hidden relative h-52 mt-8">
+                    <!-- Item 1 -->
+
+                    <span
+                        class=" z-50 pl-5 absolute pt-28 text-lg  text-white  sm:text-xl dark:text-gray-800 whitespace-pre-line ">Try our New collections
+                        of watches </span>
+                    <div id="carousel-item-1" class=" bg-black rounded-xl hidden duration-700 ease-in-out ">
+
+                        <img src="img/watch.png"
+                            class=" opacity-80 rounded-xl block absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2"
+                            alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div id="carousel-item-2" class="bg-black rounded-xl w-full hidden duration-700 ease-in-out">
+                        <img src="img/watch2 (2).jpg"
+                            class="opacity-80 rounded-xl block absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2"
+                            alt="...">
+                    </div>
+                    <!-- Item 3 -->
+                    <div id="carousel-item-3" class="bg-black hidden rounded-xl duration-700 ease-in-out">
+                        <img src="img/watch3.jpg"
+                            class="opacity-80 rounded-xl block absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2"
+                            alt="...">
+                    </div>
+                    <!-- Item 4 -->
+                    <!-- <div id="carousel-item-4" class="rounded-lg hidden duration-700 ease-in-out">
+                    <img src="img/watch.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                </div> -->
+                </div>
+                <!-- Slider indicators -->
+                <div class="flex  absolute bottom-6 left-5 z-30 space-x-1 justify-start ">
+                    <button id="carousel-indicator-1" type="button" class="h-1.5 rounded-full " aria-current="true"
+                        aria-label="Slide 1"></button>
+                    <button id="carousel-indicator-2" type="button" class="h-1.5 rounded-full "
+                        aria-current="false" aria-label="Slide 2"></button>
+                    <button id="carousel-indicator-3" type="button" class="h-1.5 rounded-full " aria-current="false"
+                        aria-label="Slide 3"></button>
+                    <!-- <button id="carousel-indicator-4" type="button" class="w-5 h-2 rounded-full hidden" aria-current="false" aria-label="Slide 4"></button> -->
+                </div>
+                <!-- Slider controls -->
+                <!-- <button id="data-carousel-prev" type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none">
+                <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <span class="hidden">Previous</span>
+                </span>
+            </button>
+            <button id="data-carousel-next" type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none">
+                <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <span class="hidden">Next</span>
+                </span>
+            </button> -->
+
+            </div>
+
+            <!-- Titles -->
+            <div class="mt-6" id="titles">
+                <div class="my-3">
+                    <h2 class="font-bold text-black text-3xl">
+                        Discover
+                    </h2>
+                </div>
+                <div class="flex gap-4 font-semibold text-black" id="container">
+                    <a href="#"><button class=" btnn active p-1.5 " >Trending</button></a>
+
+                    <a href="#"><button class="btnn p-1.5">Best sellers</button></a>
+
+                    <a href="#"><button class="btnn p-1.5">On sale</button></a>
+                </div>
+
+            </div>
+
+            <!-- Slider main container -->
+            <div class="swiper mySwiper   h-96">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper ">
+                    <!-- Slides -->
+                    <div class="swiper-slide 1   slider  ">
+                        <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover  " src="img/puma.png" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center my-4 relative top-4">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide 2 slider ">
+                        <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg  w-full h-36 object-cover " src="img/watch2.jpg" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center my-4 relative top-4 ">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide 3 slider ">
+                        <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover " src="img/watch2 (2).jpg" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center my-4 relative top-4">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><div class="swiper-slide 4 slider ">
+                        <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover " src="img/apple-watch.png" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7 h-full" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center my-4 relative top-4">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            <!--Recommended-->
+            <div>
+                <div class="title my-6">
+                    <span class="font-bold text-2xl">Recommended</span>
+                </div>
+                <div class="cards  gap-3 grid grid-cols-2 ">
+                    <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover  " src="img/puma.png" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center mt- relative top-4 ">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover  " src="img/puma.png" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center mt-4">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                    <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover  " src="img/puma.png" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center mt-4">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover  " src="img/puma.png" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center mt-4">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                    <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover  " src="img/puma.png" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center mt-4">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover  " src="img/puma.png" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center mt-4">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                    <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover  " src="img/puma.png" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center mt-4">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div
+                            class="card relative  bg-gray-50  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+
+                            <!--like btn-->
+                            <span class=" absolute right-2 top-2 bg-gray-200 p-2 rounded-lg">
+                                <svg class="z-900" xmlns="http://www.w3.org/2000/svg" width="14.625" height="12.798" viewBox="0 0 14.625 12.798">
+                                    <path id="Icon_awesome-heart" data-name="Icon awesome-heart"
+                                        d="M13.206,3.123a3.906,3.906,0,0,0-5.331.389l-.563.58-.563-.58a3.906,3.906,0,0,0-5.331-.389,4.1,4.1,0,0,0-.283,5.939l5.528,5.708a.9.9,0,0,0,1.294,0l5.528-5.708a4.1,4.1,0,0,0-.28-5.939Z"
+                                        transform="translate(0 -2.248)" fill="#474141" />
+                                </svg>
+                            </span>
+                            
+                            <!--image-->
+                            <div class="image">
+                                <img class=" rounded-lg w-full h-36 object-cover  " src="img/puma.png" alt="product image">
+                            </div>
+
+                            <div class="price">
+                                <span 
+                            class="z-50 relative bottom-4 left-2 bg-btnColor text-white font-bold text-xs p-2 rounded-lg">KWD
+                            0.950</span>
+                            </div>
+
+                            <div class="px-5 pb-7" id="card-content">
+                                
+                                <div class="item-description">
+                                    <h3 class="font-semibold text-base">
+                                        T-shirt Puma
+                                    </h3>
+                                    <h1 class="text-xs font-semibold   text-gray-400 dark:text-white">Lorem
+                                        ipsum is simply dummy</h1>
+                                </div>
+
+                                    <!--colors-->
+                                <div class="grid grid-cols-4 items-center mt-4">
+
+                                    
+                                        <div class=" col-span-3  flex justify-evenly  color">
+                                            <span class="w-5 h-5 bg-red-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-blue-400 rounded-full "></span>
+                                        <span class="w-5 h-5 bg-amber-300 rounded-full"></span>
+                                        <span class="w-5 h-5 bg-green-400 rounded-full"></span>
+                                        </div>
+                                    
+                                        <div class="col-span-1 flex justify-end cart">
+                                            
+                                                <svg id="Icon_ionic-ios-cart" data-name="Icon ionic-ios-cart"
+                                                    xmlns="http://www.w3.org/2000/svg" width="18.025" height="16.649"
+                                                    viewBox="0 0 18.025 16.649">
+                                                    <path id="Path_277" data-name="Path 277"
+                                                        d="M11.643,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,11.643,29.165Z"
+                                                        transform="translate(-5.752 -13.556)" fill="#474141" />
+                                                    <path id="Path_278" data-name="Path 278"
+                                                        d="M27.428,29.165a1.04,1.04,0,1,1-1.04-1.04A1.04,1.04,0,0,1,27.428,29.165Z"
+                                                        transform="translate(-11.806 -13.556)" fill="#474141" />
+                                                    <path id="Path_279" data-name="Path 279"
+                                                        d="M21.4,7.453a.255.255,0,0,0-.225-.182L7.058,5.906a.435.435,0,0,1-.325-.2A4.414,4.414,0,0,0,6.2,4.9c-.334-.407-.962-.394-2.115-.4a.631.631,0,0,0-.707.611.62.62,0,0,0,.676.611A5.759,5.759,0,0,1,5.185,5.8c.2.061.368.394.429.685a.016.016,0,0,0,0,.013c.009.052.087.442.087.446l1.734,9.172a3.371,3.371,0,0,0,.629,1.547,1.73,1.73,0,0,0,1.426.7H19.749a.616.616,0,0,0,.624-.581.6.6,0,0,0-.607-.633H9.485a.5.5,0,0,1-.36-.121,1.945,1.945,0,0,1-.5-1.127L8.44,14.874a.024.024,0,0,1,.017-.026l12.037-2.037a.253.253,0,0,0,.212-.225L21.4,7.566A.247.247,0,0,0,21.4,7.453Z"
+                                                        transform="translate(-3.382 -4.493)" fill="#474141" />
+                                                </svg>
+        
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+            
+
+            
+
+        </div>
+
+        <!--Desktop-->
+        <div class=" col-span-3 bg-hero  bg-cover bg-center h-full bg-no-repeat overflow-hidden ml-2 ">
+            <div class="relative bg-black bg-opacity-50  bg-cover bg-center h-full bg-no-repeat">
+                <nav class=" text-white p-8" >
+                    <div class="grid grid-cols-6">
+                        <div class="col-span-5 flex justify-end px-60  items-end font-semibold" id="navv">
+                            <a href="#" class="bg-white bg-opacity-50  rounded-full "><button
+                                    class="p-2.5 navBtn activee px-4">Home</button></a>
+                            <a href="#" class="bg-white bg-opacity-50 mx-1 rounded-full"><button
+                                    class="p-2.5 navBtn px-4">Search</button></a>
+                            <a href="#" class="bg-white bg-opacity-50 mx-1 rounded-full "><button
+                                    class="p-2.5 navBtn px-4 ">Branches</button></a>
+                            <a href="#" class="bg-white bg-opacity-50 mx-1 rounded-full"><button class="p-2.5 navBtn px-4">Other</button></a>
+                        </div>
+                        <div class="col-span-1 flex justify-end ">
+                            <span class="px-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 bg-white text-black p-2 rounded-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                              </svg></span>
+                              <span class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-black bg-white p-2 rounded-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                  </svg>
+                            </span>
+                              
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </nav> 
+                
+                <div class="absolute top-[22rem] left-[40rem]">
+                    <div class="bg-white px-3 py-14 ">
+                        <img src="img/logo.png" alt="logo" class="bg-t w-40">
+                    </div>
+                   <div class="mt-2">
+                    <div class="flex justify-center">
+                        <span class="text-white text-3xl font-semibold">VENDY WAY</span>
+                    </div>
+                    <div class="flex justify-center">
+                        <span class="text-white text-xl">The Art of watches</span>
+                    </div>
+                   </div>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="indexx.js"></script>
+
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
